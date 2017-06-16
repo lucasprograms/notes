@@ -1,3 +1,4 @@
+import 'bootstrap-loader'
 import React, { Component } from 'react'
 import { v1 as buildUniqID } from 'uuid'
 import Note from './components/Note.js'
@@ -50,8 +51,10 @@ class App extends Component {
       <div>
         <ReactGridLayout className="layout"
                         layout={this.state.layout}
-                        width={1200}
+                        cols={100}
+                        width={10000}
                         rowHeight={15}
+                        containerPadding={[10, 10]}
                         onLayoutChange={(newLayout) => {
                           this.setState({
                             layout: newLayout
