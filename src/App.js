@@ -1,9 +1,9 @@
-import 'bootstrap-loader'
+import ReactGridLayout from 'react-grid-layout' 
 import React, { Component } from 'react'
 import { v1 as buildUniqID } from 'uuid'
-import Note from './components/Note.js'
+import Note from './components/Note'
+import Header from './components/Header'
 import './App.css'
-import ReactGridLayout from 'react-grid-layout' 
 
 class App extends Component {
   constructor() {
@@ -48,7 +48,8 @@ class App extends Component {
 
   render () {
     return (
-      <div>
+      <div className="container">
+        <Header />
         <ReactGridLayout className="layout"
                         layout={this.state.layout}
                         cols={100}
